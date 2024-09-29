@@ -1,0 +1,8 @@
+.card-container {
+    display: flex;
+    flex-direction: row; /* 水平排列 */
+    flex-wrap: wrap;
+    gap: 6px; /* 卡片之间的间隔 */
+    /* justify-content: space-between; 在容器中均匀分布 */
+    overflow-x: auto; /* 使容器可水平滚动 */
+  }
