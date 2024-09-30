@@ -64,6 +64,9 @@ export class WordCardsComponent implements OnInit {
         this.wordExplanation = result.explanation
         console.log(this.wordName,this.wordContent,this.wordExplanation)
         this.cardMgr.addCard(this.wordName,this.wordContent,this.wordExplanation)
+        this.wordName ='',
+        this.wordContent='',
+        this.wordExplanation =''
       }
     });
   }
