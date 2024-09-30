@@ -1,1 +1,15 @@
-<app-dynamic-loader></app-dynamic-loader>
+<div class="example-button-row">
+    <button mat-raised-button (click)="openDialog()">添加卡片</button>
+    <!-- <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a> -->
+</div>
+<div class="card-container">
+    @for(card of allCards;track card){
+        <app-card [frontTitle] = "card.frontTitle" 
+        [frontContent] = "card.frontContent"
+        [backTitle] = "card.backTitle"
+        [backContent] = "card.backContent"
+        [lastTimeChecked] = "card.lastTimeChecked"></app-card>
+    }
+</div>
+<!-- <app-dynamic-loader></app-dynamic-loader> -->

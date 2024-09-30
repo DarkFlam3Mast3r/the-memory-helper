@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>添加单词卡片中...</h2>
+<mat-dialog-content>
+  <p>要添加的单词</p>
+  <mat-form-field>
+    <mat-label>单词名称</mat-label>
+    <input matInput [(ngModel)]="wordName" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>单词内容</mat-label>
+    <input matInput [(ngModel)]="wordContent" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>单词释义</mat-label>
+    <input matInput [(ngModel)]="wordExplanation" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">不了</button>
+  <button mat-button [mat-dialog-close]="{
+    name: wordName(),
+    content: wordContent(),
+    explanation: wordExplanation()
+  }"  cdkFocusInitial>确认</button>
+</mat-dialog-actions>

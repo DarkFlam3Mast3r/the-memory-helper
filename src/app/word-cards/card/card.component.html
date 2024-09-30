@@ -1,24 +1,25 @@
+
 <div class="flip-card" (click)="toggleFlip()">
     <div class="flip-card-inner" [class.flipped]="isFlipped">
-      <div class="flip-card-front mat-elevation-z4">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>{{ frontTitle }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>{{ frontContent }}</p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="flip-card-back mat-elevation-z4">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>{{ backTitle }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>{{ backContent }}</p>
-          </mat-card-content>
-        </mat-card>
-      </div>
+        <div class="flip-card-front mat-elevation-z4">
+            <mat-card>
+                <mat-card-header [appCardColor]="lastTimeChecked">
+                    <mat-card-title>{{ frontTitle }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content [appCardColor]="lastTimeChecked">
+                    <p>{{ frontContent }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="flip-card-back mat-elevation-z4">
+            <mat-card>
+                <mat-card-header [appCardColor]="lastTimeChecked">
+                    <mat-card-title>{{ backTitle }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content [appCardColor]="lastTimeChecked">
+                    <p>{{ backContent }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
     </div>
-  </div>
+</div>
